@@ -1,0 +1,66 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.13.35919.96
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmsNotification.API", "SmsNotification.API\SmsNotification.API.csproj", "{941A63CF-8E9A-4130-DD70-B030E875B9E7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmsNotification.APPLICATION", "SmsNotification.APPLICATION\SmsNotification.APPLICATION.csproj", "{FB3B88AF-9D8C-AA41-2EFE-48421E7FBAC3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmsNotification.DOMAIN", "SmsNotification.DOMAIN\SmsNotification.DOMAIN.csproj", "{D21F4E7E-F0FB-BACE-9108-E45174B50EBE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmsNotification.INFRASTRUCTURE", "SmsNotification.INFRASTRUCTURE\SmsNotification.INFRASTRUCTURE.csproj", "{210ACCA2-2CDA-02E8-46C0-4D400F2B9F46}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmsNotification.SMSWORKER", "SmsNotification.SMSWORKER\SmsNotification.SMSWORKER.csproj", "{DE7CBE14-0CB4-BAF2-4E85-C3A185FB3CDB}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "K8s", "K8s", "{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}"
+	ProjectSection(SolutionItems) = preProject
+		k8s\configmap.yaml = k8s\configmap.yaml
+		k8s\deployment.yaml = k8s\deployment.yaml
+		k8s\rabbitmq-client.yaml = k8s\rabbitmq-client.yaml
+		k8s\notification-worker-deployment.yaml = k8s\notification-worker-deployment.yaml
+		k8s\rabbitmq-dashboard.yaml = k8s\rabbitmq-dashboard.yaml
+		k8s\rabbitmq-headless.yaml = k8s\rabbitmq-headless.yaml
+		k8s\rabbitmq-service.yaml = k8s\rabbitmq-service.yaml
+		k8s\rabbitmq-statefulset.yaml = k8s\rabbitmq-statefulset.yaml
+		k8s\redis-deployment.yaml = k8s\redis-deployment.yaml
+		k8s\redis-service.yaml = k8s\redis-service.yaml
+		k8s\secret.yaml = k8s\secret.yaml
+		k8s\service.yaml = k8s\service.yaml
+		k8s\sms-worker-deployment.yaml = k8s\sms-worker-deployment.yaml
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{941A63CF-8E9A-4130-DD70-B030E875B9E7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{941A63CF-8E9A-4130-DD70-B030E875B9E7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{941A63CF-8E9A-4130-DD70-B030E875B9E7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{941A63CF-8E9A-4130-DD70-B030E875B9E7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FB3B88AF-9D8C-AA41-2EFE-48421E7FBAC3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FB3B88AF-9D8C-AA41-2EFE-48421E7FBAC3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FB3B88AF-9D8C-AA41-2EFE-48421E7FBAC3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FB3B88AF-9D8C-AA41-2EFE-48421E7FBAC3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D21F4E7E-F0FB-BACE-9108-E45174B50EBE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D21F4E7E-F0FB-BACE-9108-E45174B50EBE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D21F4E7E-F0FB-BACE-9108-E45174B50EBE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D21F4E7E-F0FB-BACE-9108-E45174B50EBE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{210ACCA2-2CDA-02E8-46C0-4D400F2B9F46}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{210ACCA2-2CDA-02E8-46C0-4D400F2B9F46}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{210ACCA2-2CDA-02E8-46C0-4D400F2B9F46}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{210ACCA2-2CDA-02E8-46C0-4D400F2B9F46}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DE7CBE14-0CB4-BAF2-4E85-C3A185FB3CDB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DE7CBE14-0CB4-BAF2-4E85-C3A185FB3CDB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DE7CBE14-0CB4-BAF2-4E85-C3A185FB3CDB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DE7CBE14-0CB4-BAF2-4E85-C3A185FB3CDB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3A6372BB-C5BC-4C1C-A46F-9817B9F48AA4}
+	EndGlobalSection
+EndGlobal

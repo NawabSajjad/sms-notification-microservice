@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "SmsNotification.SMSWORKER": {
+      "commandName": "Project"
+    },
+    "Container (Dockerfile)": {
+      "commandName": "Docker"
+    }
+  }
+}

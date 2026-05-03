@@ -1,0 +1,34 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: sms-worker
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: sms-worker
+  template:
+    metadata:
+      labels:
+        app: sms-worker
+    spec:
+      containers:
+      - name: sms-worker
+        image: smsworker:v1
+        imagePullPolicy: Always
+        envFrom:
+        - configMapRef:
+            name: sms-api-config
+        - secretRef:
+            name: sms-api-secret
+        env:
+          - name: WORKER_TYPE
+            value: "sms"
+          - name: RabbitMq__Host
+            value: rabbitmq-client
+          - name: RabbitMq__Port
+            value: "5672"
+          - name: RabbitMq__Username
+            value: smsuser
+          - name: RabbitMq__Password
+            value: smspassword
